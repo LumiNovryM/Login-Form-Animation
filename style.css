@@ -91,7 +91,6 @@ label{
     font-size: var(--normal-font-size);
     transition: .3s;
     z-index: 2;
-    font-weight: bold;
 }
 
 .form-button{
