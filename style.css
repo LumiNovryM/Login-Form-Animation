@@ -1,0 +1,118 @@
+/*=== GOOGLE FONTS ===*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/*=== CSS VARIABEL ===*/
+:root{
+    /*=== COLORS ===*/
+    --background-color: #23242b;
+    --input-color: #27ccbc;
+    --border-color: #27ccbc;
+    /*=== FONTS ===*/
+    --body-font: 'Poppins',sans-serif;
+    --normal-font-size: 1rem;
+    --small-font-size: .75rem;
+}
+
+/*=== BODY ===*/
+body{
+    background-color: var(--background-color);
+}
+
+/*=== RESET ===*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+h1{
+    margin: 0;
+}
+
+/*=== FORM SETTING ===*/
+.parent-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form{
+    width: 400px;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    background: var(--background-color);
+    box-shadow:  20px 20px 60px #17171c,
+                -20px -20px 60px #2f313a;
+}
+
+.form-title{
+    font-weight: 300;
+    margin-bottom: 3rem;
+    font-size: 32px;
+    color: var(--input-color);
+}
+
+.form-input{
+    position: relative;
+    height: 48px;
+    margin-bottom: 1.5rem;
+}
+
+.input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: var(--normal-font-size);
+    border: 1px solid var(--border-color);
+    border-radius: .5rem;
+    outline: none;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+    color: var(--input-color);
+}
+
+input:focus{
+    border: 2px solid var(--border-color);
+}
+
+label{
+    position: absolute;
+    left: 1rem;
+    top: 10px;
+    padding: 0 .25rem;
+    background-color: var(--background-color);
+    color: var(--input-color);
+    font-size: var(--normal-font-size);
+    transition: .3s;
+    z-index: 2;
+    font-weight: bold;
+}
+
+.form-button{
+    display: block;
+    margin-left: auto;
+    padding: .50rem 2.5rem;
+    outline: none;
+    border: none;
+    background-color: var(--border-color);
+    color: var(--background-color);
+    font-size: var(--normal-font-size);
+    border: .5rem;
+    border-radius: 10px;
+}
+
+/*=== ANIMATION SETTINGS ===*/
+.input:focus + label{
+    top: -1rem;
+    left: .8rem;
+    color: var(--input-color);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+    z-index: 10;
+}
